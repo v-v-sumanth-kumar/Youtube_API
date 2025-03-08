@@ -1,7 +1,7 @@
 import requests
 import os
 
-API_KEY = "YOUR_YOUTUBE_API_KEY"
+API_KEY = "AIzaSyBE03Zf47jVxnjeuP_gIOrHlE2nZ4mPlOw"
 SEARCH_QUERY = "Python Programming"
 BASE_URL = "https://www.googleapis.com/youtube/v3/search"
 

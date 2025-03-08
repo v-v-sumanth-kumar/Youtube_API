@@ -10,6 +10,7 @@ class Video(Base):
     published_at = Column(DateTime, index=True, nullable=False)
     thumbnails = Column(JSON)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
+    channel_title = Column(String(255), nullable=True)
 
 
 class csds(Base):
