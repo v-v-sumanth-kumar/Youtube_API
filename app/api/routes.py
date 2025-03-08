@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from app.models.database import get_db
-from app.models.video import Video
+from models.database import get_db
+from models.video import Video
 from pydantic import BaseModel
 from typing import List
 from datetime import datetime

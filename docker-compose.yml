@@ -10,7 +10,8 @@ services:
     volumes:
       - ./app:/app
     environment:
-      DATABASE_URL: "postgresql://postgres:12345@localhost:5432/youtube_api"
+      - DATABASE_URL= "postgresql://postgres:12345@db:5432/youtube_api"
+      - PYTHONPATH=/app
     depends_on:
       - db
 

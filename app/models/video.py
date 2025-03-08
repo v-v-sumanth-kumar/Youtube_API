@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Text, DateTime, JSON
-from app.models.database import Base
+from models.database import Base
 import datetime
 
 class Video(Base):
