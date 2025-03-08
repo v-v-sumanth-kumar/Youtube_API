@@ -3,5 +3,5 @@ uvicorn
 sqlalchemy
 python-dotenv
 psycopg2-binary
-pip install --upgrade google-auth-oauthlib google-auth-httplib2
-pip install --upgrade google-auth-oauthlib google-auth-httplib2
+google-auth-oauthlib
+google-auth-httplib2
