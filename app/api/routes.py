@@ -13,14 +13,6 @@ router = APIRouter()
 def get_videos(page: int = 1, page_size: int = 10, db: Session = Depends(get_db)):
     """
     Fetch a paginated list of videos, sorted by the publication date in descending order.
-
-    Parameters:
-    - page (int): The page number to fetch (default is 1).
-    - page_size (int): The number of videos per page (default is 10).
-    - db (Session): The database session dependency.
-
-    Returns:
-    - A list of video records.
     """
     offset = (page - 1) * page_size
     videos = db.query(Video).order_by(Video.published_at.desc()).offset(offset).limit(page_size).all()
@@ -30,15 +22,6 @@ def get_videos(page: int = 1, page_size: int = 10, db: Session = Depends(get_db)
 def search_videos(query: str, page: int = 1, page_size: int = 10, db: Session = Depends(get_db)):
     """
     Search videos by matching query terms in the title or description, with pagination.
-
-    Parameters:
-    - query (str): The search query (terms separated by spaces).
-    - page (int): The page number to fetch (default is 1).
-    - page_size (int): The number of videos per page (default is 10).
-    - db (Session): The database session dependency.
-
-    Returns:
-    - A list of videos matching the search criteria.
     """
     query_terms = query.split()
     title_filters = [Video.title.ilike(f"%{term}%") for term in query_terms] # Generate filters for title based on the query terms
@@ -57,7 +40,7 @@ def search_videos(query: str, page: int = 1, page_size: int = 10, db: Session = 
         description_filter = true()
     combined_filter = or_(title_filter, description_filter) # Combine title and description filters using OR logic
     offset = (page - 1) * page_size
-    
+
     # Query the videos from the database using the combined filter
     videos = (
         db.query(Video)
