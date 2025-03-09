@@ -1,6 +1,6 @@
 # YouTube Video Fetcher  
 
-This project is a **YouTube Video Fetcher** that uses the YouTube Data API to fetch and store metadata for videos related to a specific search query. The fetched videos are saved into a database for further usage, such as displaying them in a frontend application.  
+This project is a **YouTube Video Fetcher** that uses the YouTube Data API to fetch and store metadata for videos related to a specific search query. The fetched videos are saved into a database for further usage.  
 
 ## Features  
 
@@ -23,12 +23,13 @@ This project is a **YouTube Video Fetcher** that uses the YouTube Data API to fe
 
 Ensure you have the following installed:  
 - Python 3.8+  
-- Virtual environment tools (`venv`, `virtualenv`, or similar)  
-- A YouTube Data API key (or multiple keys)  
+- A YouTube Data API key (or multiple keys) [(reference)](https://developers.google.com/youtube/v3/quickstart/python)
+- Docker and Docker Compose  
+ 
 
 ## Setup  
 
 1. **Clone the repository**:  
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/v-v-sumanth-kumar/Youtube_API.git
+   cd Youtube_API
