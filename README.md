@@ -1,1 +1,34 @@
-# Youtube_API
+# YouTube Video Fetcher  
+
+This project is a **YouTube Video Fetcher** that uses the YouTube Data API to fetch and store metadata for videos related to a specific search query. The fetched videos are saved into a database for further usage, such as displaying them in a frontend application.  
+
+## Features  
+
+- Fetch YouTube videos based on a search query.  
+- Store video metadata in a relational database.  
+- API endpoints for fetching and searching videos.  
+- Handles API quota limits and rotates multiple API keys.  
+- Scheduler to periodically fetch new videos.  
+- Integrated logging for debugging and monitoring.  
+
+## Technologies Used  
+
+- **Backend Framework**: FastAPI  
+- **Database**: SQLAlchemy with SQLite or PostgreSQL (via `DATABASE_URL`)  
+- **Scheduler**: APScheduler  
+- **YouTube Data API v3**  
+- **Logging**: Python’s `logging` module  
+
+## Prerequisites  
+
+Ensure you have the following installed:  
+- Python 3.8+  
+- Virtual environment tools (`venv`, `virtualenv`, or similar)  
+- A YouTube Data API key (or multiple keys)  
+
+## Setup  
+
+1. **Clone the repository**:  
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
